@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'DM Sans';
+    list-style: none;
+    text-decoration: none;
+}
+
+:root{
+    --body: #FFF;
+}
+
+.body{
+    background: var(--body);
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.body > p.text{
+    margin-top: 20px;
+    text-align: center;
+    font-weight: bold;
+    color: #444;
+}
+
+.networks{
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.networks li{
+    display: flex;
+}
+
+.networks li a{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: auto;
+    aspect-ratio: 1/1;
+    background: rgba(0 0 0 / 0.075);
+    transition: all 200ms linear;
+    border: 1px solid #999;
+    border-radius: 100%;
+}
+
+.networks li a:hover{
+    background: #FF0000;
+}
+
+.networks li a i{
+    font-size: 20px;
+    color: #000;
+    transition: all 200ms linear;
+}
+
+.networks li a:hover i{
+    color: #FFFFFF;
+}
+
+.networks li a p{
+    position: absolute;
+    left: 50%;
+    top: calc(100% + 2px);
+    translate: -50% 0;
+    background: #FF0000;
+    color: #FFF;
+    padding: 3px 6px;
+    border-radius: 2px;
+    font-size: 11px;
+    /* font-weight: bold; */
+
+    opacity: 0;
+    pointer-events: none;
+    user-select: none;
+
+    transition: all 200ms linear;
+}
+
+.networks li a:hover p{
+    opacity: 1;
+    top: calc(100% + 5px);
+}
